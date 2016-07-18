@@ -1,0 +1,8 @@
+node_modules
+config.json
+event.json
+env.json
+env.*.json
+project.json
+project.*.json
+functions/**/main.js
