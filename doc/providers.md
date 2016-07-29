@@ -7,6 +7,39 @@ Each review provider returns the following data inputs for each review:
 * `glob` (optional, default: all files) - the glob of files to match (this uses the [minimatch](https://www.npmjs.com/package/minimatch) package)
 * `required` (optional, default `1`) - the number of logins required to sign off for this review to be satisfied
 
+## Further Review file
+
+Maintainers are specified in the standard Further Review file format. The default file name is **.further-review.yml**, but the file name is configurable.
+
+The YAML file takes the following format:
+
+```yaml
+reviews:
+  - name: Package.json Maintainers
+    logins:
+      # All three of the following formats are supported:
+      - paultyng
+      - paultyng <paul@example.com>
+      - Paul Tyng <paul@example.com> (@paultyng)
+    # Optional glob to match on
+    glob: package.json
+    # Number of required sign offs
+    required: 1
+  # Multiple reviews can be listed.
+  - name: General Maintainers
+    logins:
+      - user1
+      - user2
+```
+
+### Configuration
+
+```js
+  {
+    "file": "file1.yml,file2.yaml", // name of the YAML file
+  }
+```
+
 ## `package_json_file`
 
 Maintainers will be imported from the **package.json** of an NPM project if it has a `maintainers` section that has a url in one of the following formats:

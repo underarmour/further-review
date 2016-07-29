@@ -9,6 +9,30 @@
 
 ## Getting Started
 
+There are a number of ways to use Further Review with your repo, but the easiest is to just add a **.further-review.yml** file similar to this example:
+
+```yaml
+reviews:
+  - name: Package.json Maintainers
+    # List of GitHub usernames
+    logins:
+      # All three of the following formats are supported:
+      - paultyng
+      - paultyng <paul@example.com>
+      - Paul Tyng <paul@example.com> (@paultyng)
+    # Optional glob to match on
+    glob: package.json
+    # Number of required sign offs
+    required: 1
+  # Multiple reviews can be listed.
+  - name: General Maintainers
+    logins:
+      - user1
+      - user2
+```
+
+Given the file above, when a new PR is submitted, at least one of **user1** or **user2** will need to sign off due to the `General Maintainers` rule, and if the PR touches the **package.json** file, **paultyng** would also need to sign off.
+
 ### Installation
 
 #### Docker
