@@ -17,7 +17,7 @@ Coming soon...
 
 #### Lambda
 
-This application uses [Apex](https://apex.run) to run on AWS Lambda.  To deploy on Lambda:
+This application uses [Apex](http://apex.run) to run on AWS Lambda.  To deploy on Lambda:
 
 1. Create an **env.json** file (`GITHUB_BASE_URL` defaults to public GitHub):
 
