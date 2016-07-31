@@ -30,13 +30,15 @@
     "eslint-config-airbnb": "^9.0.1",
     "eslint-plugin-import": "^1.11.1",
     "eslint-plugin-jsx-a11y": "^2.0.1",
-    "eslint-plugin-react": "^5.2.2"
+    "eslint-plugin-react": "^5.2.2",
+    "sinon": "^1.17.5"
   },
   "scripts": {
     "start": "node ./main.js",
     "test": "ava",
     "lint": "eslint .",
-    "test-hook": "curl -X POST -d @event.json -H 'Content-Type: application/json' http://localhost:3000/github-webhook"
+    "test-hook": "curl -X POST -d @event.json -H 'Content-Type: application/json' http://localhost:3000/github-webhook",
+    "ci": "npm test && npm run lint"
   },
   "ava": {
     "require": [
