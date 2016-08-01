@@ -1,5 +1,7 @@
 # (Upon) Further Review
 
+[![Build Status](https://travis-ci.org/paultyng/further-review.svg?branch=master)](https://travis-ci.org/paultyng/further-review) [![Coverage Status](https://coveralls.io/repos/github/paultyng/further-review/badge.svg?branch=master)](https://coveralls.io/github/paultyng/further-review?branch=master)
+
 **Further Review** enforces glob based code reviews on PRs.
 
 * [Getting Started](#getting-started)

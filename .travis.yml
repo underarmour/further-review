@@ -1,7 +1,6 @@
 language: node_js
 node_js:
   - '4'
-script: npm run ci
 env:
   - CXX=g++-4.8
 addons:
@@ -12,3 +11,7 @@ addons:
       - g++-4.8
 notifications:
   email: false
+before_install:
+  - 'npm install -g npm@latest'
+after_success:
+  - './node_modules/.bin/nyc report --reporter=text-lcov | ./node_modules/.bin/coveralls'
