@@ -1,4 +1,6 @@
 node_modules
+converage
+.nyc_output
 config.json
 event.json
 env.json
