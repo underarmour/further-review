@@ -1,6 +1,6 @@
 # (Upon) Further Review
 
-[![Build Status](https://travis-ci.org/paultyng/further-review.svg?branch=master)](https://travis-ci.org/paultyng/further-review) [![Coverage Status](https://coveralls.io/repos/github/paultyng/further-review/badge.svg?branch=master)](https://coveralls.io/github/paultyng/further-review?branch=master)
+[![Build Status](https://travis-ci.org/paultyng/further-review.svg?branch=master)](https://travis-ci.org/paultyng/further-review) [![Coverage Status](https://coveralls.io/repos/github/paultyng/further-review/badge.svg?branch=master)](https://coveralls.io/github/paultyng/further-review?branch=master) [![Dependency Status](https://dependencyci.com/github/paultyng/further-review/badge)](https://dependencyci.com/github/paultyng/further-review)
 
 **Further Review** enforces glob based code reviews on PRs.
 
