@@ -8,6 +8,7 @@
 * [How it works](doc/how-it-works.md)
 * [Providers](doc/providers.md)
 * [Watch / Subscriptions only](#using-for-glob-based-watch--subscriptions)
+* [Inspirations](#inspirations)
 
 ## Getting Started
 
@@ -75,3 +76,8 @@ A webhook should be configured in GitHub with the following events:
 ## Using for Glob based Watch / Subscriptions
 
 To just subscribe to files for notification but not be required for review, you can add a targeted review with zero required sign-offs.
+
+## Inspirations
+
+* [LGTM](https://lgtm.co)
+* [Facebook's Mention Bot](https://github.com/facebook/mention-bot)
