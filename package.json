@@ -39,6 +39,7 @@
   "scripts": {
     "start": "node ./main.js",
     "test": "eslint . && nyc ava",
+    "coverage": "nyc --reporter=text-lcov ava > ./coverage/lcov.info",
     "test-hook": "curl -X POST -d @event.json -H 'Content-Type: application/json' http://localhost:3000/github-webhook"
   },
   "ava": {

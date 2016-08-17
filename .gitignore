@@ -1,5 +1,5 @@
 node_modules
-converage
+coverage
 .nyc_output
 config.json
 event.json
