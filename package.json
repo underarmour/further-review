@@ -11,7 +11,7 @@
   "dependencies": {
     "apex.js": "^2.0.0",
     "aws-sdk": "^2.5.2",
-    "axios": "^0.13.1",
+    "axios": "^0.14.0",
     "babel-polyfill": "^6.9.1",
     "babel-register": "^6.11.6",
     "bluebird": "^3.4.1",
