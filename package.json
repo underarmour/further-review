@@ -1,7 +1,11 @@
 {
   "name": "further-review",
   "version": "1.0.0-alpha.1",
-  "description": "Targeted, glob based, pull request review.",
+  "description": "Pull request process enforcer.",
+  "keyword": [
+    "pull request", "pr", "glob", "lgtm", "github",
+    "webhook", "process"
+  ],
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
@@ -54,7 +58,7 @@
   "scripts": {
     "start": "node ./main.js",
     "test": "eslint . && nyc ava",
-    "coverage": "nyc --reporter=text-lcov ava > ./coverage/lcov.info",
+    "coverage": "nyc --reporter=text-lcov ava > ./coverage/lcov.info; which lcov && lcov -l ./coverage/lcov.info",
     "test-hook": "curl -X POST -d @event.json -H 'Content-Type: application/json' http://localhost:3000/github-webhook"
   },
   "ava": {

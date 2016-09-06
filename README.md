@@ -5,8 +5,8 @@
 **Further Review** enforces glob based code reviews on PRs.
 
 * [Getting Started](#getting-started)
-* [How it works](doc/how-it-works.md)
-* [Providers](doc/providers.md)
+* [How it works](docs/how-it-works.md)
+* [Providers](docs/providers.md)
 * [Watch / Subscriptions only](#using-for-glob-based-watch--subscriptions)
 * [Inspirations](#inspirations)
 
@@ -63,7 +63,7 @@ This application uses [Apex](http://apex.run) to run on AWS Lambda.  To deploy o
 
 Further Review works best when the `master` branch is protected until it reviews the PR.  You can set this up in GitHub settings for the repo.
 
-![Protecting the master branch](doc/img/protect-branch.png)
+![Protecting the master branch](docs/img/protect-branch.png)
 
 #### Setting up the Webhooks
 
