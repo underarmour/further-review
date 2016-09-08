@@ -43,7 +43,7 @@
     "browserify": "^13.0.1",
     "coveralls": "^2.11.12",
     "eslint": "^3.3.0",
-    "eslint-config-airbnb": "^10.0.1",
+    "eslint-config-airbnb": "^11.0.0",
     "eslint-plugin-babel": "^3.3.0",
     "eslint-plugin-import": "^1.14.0",
     "eslint-plugin-jsx-a11y": "^2.1.0",
