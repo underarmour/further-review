@@ -10,6 +10,8 @@ module.exports = {
     'no-unused-vars': ['error', {
       argsIgnorePattern: '^_',
     }],
+    'class-methods-use-this': 0,
+    'arrow-parens': 0,
 
 
     // temporarily turned off due to babel / eslint issue
