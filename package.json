@@ -46,7 +46,7 @@
     "babelify": "^7.3.0",
     "browserify": "^13.0.1",
     "coveralls": "^2.11.12",
-    "eslint": "^3.3.0",
+    "eslint": "^3.6.1",
     "eslint-config-airbnb": "^11.1.0",
     "eslint-plugin-babel": "^3.3.0",
     "eslint-plugin-import": "^1.14.0",
