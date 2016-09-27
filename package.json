@@ -3,8 +3,13 @@
   "version": "1.0.0-alpha.1",
   "description": "Pull request process enforcer.",
   "keyword": [
-    "pull request", "pr", "glob", "lgtm", "github",
-    "webhook", "process"
+    "pull request",
+    "pr",
+    "glob",
+    "lgtm",
+    "github",
+    "webhook",
+    "process"
   ],
   "license": "Apache-2.0",
   "repository": {
@@ -46,10 +51,10 @@
     "babelify": "^7.3.0",
     "browserify": "^13.0.1",
     "coveralls": "^2.11.12",
-    "eslint": "^3.3.0",
-    "eslint-config-airbnb": "^11.1.0",
+    "eslint": "^3.6.1",
+    "eslint-config-airbnb": "^12.0.0",
     "eslint-plugin-babel": "^3.3.0",
-    "eslint-plugin-import": "^1.14.0",
+    "eslint-plugin-import": "^1.16.0",
     "eslint-plugin-jsx-a11y": "^2.1.0",
     "eslint-plugin-react": "^6.1.0",
     "nyc": "^8.1.0",
