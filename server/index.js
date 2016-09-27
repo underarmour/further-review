@@ -1,7 +1,7 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 
-import { version } from '../package';
+import { version } from '../package.json';
 import log from '../lib/log';
 import webhook from '../lib/webhook';
 import Reviewer from '../lib/reviewer';
