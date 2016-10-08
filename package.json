@@ -57,7 +57,7 @@
     "eslint-module-utils": "^1.0.0",
     "eslint-plugin-babel": "^3.3.0",
     "eslint-plugin-import": "^2.0.0",
-    "eslint-plugin-jsx-a11y": "^2.1.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
     "eslint-plugin-react": "^6.3.0",
     "nyc": "^8.3.1",
     "sinon": "^1.17.6"
