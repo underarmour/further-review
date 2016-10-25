@@ -22,7 +22,7 @@
     "aws-sdk": "^2.6.7",
     "axios": "^0.15.0",
     "babel-polyfill": "^6.16.0",
-    "babel-register": "^6.16.3",
+    "babel-register": "^6.18.0",
     "bluebird": "^3.4.6",
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
