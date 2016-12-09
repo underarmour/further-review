@@ -48,7 +48,7 @@
     "babel-plugin-transform-es2015-sticky-regex": "^6.8.0",
     "babel-plugin-transform-es2015-unicode-regex": "^6.11.0",
     "babel-plugin-transform-exponentiation-operator": "^6.8.0",
-    "babel-plugin-transform-object-rest-spread": "^6.8.0",
+    "babel-plugin-transform-object-rest-spread": "^6.20.2",
     "babelify": "^7.3.0",
     "browserify": "^13.0.1",
     "coveralls": "^2.11.14",
