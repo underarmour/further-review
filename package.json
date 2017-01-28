@@ -25,7 +25,7 @@
     "babel-register": "^6.16.3",
     "bluebird": "^3.4.6",
     "body-parser": "^1.15.2",
-    "express": "^4.14.0",
+    "express": "^4.14.1",
     "js-yaml": "^3.6.1",
     "minimatch": "^3.0.2",
     "nconf": "github:paultyng/nconf#browserify",
