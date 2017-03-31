@@ -19,7 +19,7 @@
   "main": "main.js",
   "dependencies": {
     "apex.js": "^2.0.0",
-    "aws-sdk": "^2.6.7",
+    "aws-sdk": "^2.30.0",
     "axios": "^0.15.0",
     "babel-polyfill": "^6.16.0",
     "babel-register": "^6.16.3",
