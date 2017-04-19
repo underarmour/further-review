@@ -2,6 +2,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 
 import { version } from '../package.json';
+import basicAuth from './basic_auth';
 import log from '../lib/log';
 import webhook from '../lib/webhook';
 import Reviewer from '../lib/reviewer';
@@ -17,6 +18,8 @@ app.use(bodyParser.json());
 app.get('/', (req, res) => {
   res.send(`Further Review ${version}`);
 });
+
+app.use(basicAuth(config('auth')));
 
 app.post('/github-webhook', (req, res, next) => {
   webhook(github, reviewer, req.body)
