@@ -62,7 +62,7 @@
     "eslint-plugin-jsx-a11y": "^2.2.3",
     "eslint-plugin-react": "^6.4.1",
     "nyc": "^8.3.1",
-    "sinon": "^1.17.6"
+    "sinon": "^1.17.7"
   },
   "scripts": {
     "start": "node ./main.js",
