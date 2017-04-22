@@ -25,7 +25,7 @@
     "babel-register": "^6.16.3",
     "bcrypt": "^1.0.2",
     "bluebird": "^3.4.6",
-    "body-parser": "^1.15.2",
+    "body-parser": "^1.17.0",
     "express": "^4.14.0",
     "express-x-hub": "^1.0.4",
     "js-yaml": "^3.6.1",
