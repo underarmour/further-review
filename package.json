@@ -34,7 +34,7 @@
     "normalize-package-data": "^2.3.5"
   },
   "devDependencies": {
-    "ava": "^0.16.0",
+    "ava": "^0.18.0",
     "babel-eslint": "^7.0.0",
     "babel-plugin-syntax-trailing-function-commas": "^6.13.0",
     "babel-plugin-transform-async-to-generator": "^6.8.0",
