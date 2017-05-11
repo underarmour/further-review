@@ -5,3 +5,4 @@ env.*.json
 project.json
 project.*.json
 functions/**/*.*
+node_modules/*
