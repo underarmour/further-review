@@ -36,11 +36,29 @@ reviews:
 
 Given the file above, when a new PR is submitted, at least one of **user1** or **user2** will need to sign off due to the `General Maintainers` rule, and if the PR touches the **package.json** file, **paultyng** would also need to sign off.
 
+### Preliminary Setup
+
+#### Github Access Token
+
+Create a [personal access token](https://github.com/settings/tokens):
+![Setting a personal access token](docs/img/access-token.png)
+
 ### Installation
 
 #### Docker
 
-Coming soon...
+```bash
+> git clone git@github.com:underarmour/further-review.git
+> cd further-review
+> docker build .
+> docker run --env GITHUB__TOKEN=<token> <image_id>
+```
+
+To run in Github Enterprise, use:
+
+```bash
+> docker run --env GITHUB__TOKEN=<token> --env GITHUB__BASE_URL=<api_path> <image_id>
+```
 
 #### Lambda
 
@@ -50,12 +68,28 @@ This application uses [Apex](http://apex.run) to run on AWS Lambda.  To deploy o
 
   ```json
   {
-    "GITHUB_TOKEN": "YOUR TOKEN HERE",
+    "GITHUB_TOKEN": "YOUR ACCESS TOKEN HERE",
     "GITHUB_BASE_URL": "https://api.github.com/"
   }
   ```
 
 1. Run `apex deploy -e env.json`
+
+#### Setting up the Webhooks
+
+> ##### Local Development Note
+You'll need a tunnel or public ip for github to reach your hook.
+If you don't have a public host, you can use a service like [ngrok](https://ngrok.com/).
+
+A webhook should be configured in GitHub with the payload URL of
+```
+http://<host or ip from docker or Lambda>/github-webhook
+```
+with the following events:
+
+* Issue comment
+* Pull request
+* Pull request review comment
 
 ### Additional Setup
 
@@ -64,14 +98,6 @@ This application uses [Apex](http://apex.run) to run on AWS Lambda.  To deploy o
 Further Review works best when the `master` branch is protected until it reviews the PR.  You can set this up in GitHub settings for the repo.
 
 ![Protecting the master branch](docs/img/protect-branch.png)
-
-#### Setting up the Webhooks
-
-A webhook should be configured in GitHub with the following events:
-
-* Issue comment
-* Pull request
-* Pull request review comment
 
 ## Using for Glob based Watch / Subscriptions
 
