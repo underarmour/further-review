@@ -1,6 +1,8 @@
 # (Upon) Further Review
 
-[![Build Status](https://travis-ci.org/paultyng/further-review.svg?branch=master)](https://travis-ci.org/paultyng/further-review) [![Coverage Status](https://coveralls.io/repos/github/paultyng/further-review/badge.svg?branch=master)](https://coveralls.io/github/paultyng/further-review?branch=master) [![Dependency Status](https://dependencyci.com/github/paultyng/further-review/badge)](https://dependencyci.com/github/paultyng/further-review)
+[![Build Status][travis-badge]][travis-link]
+[![Coverage Status][coveralls-badge]][coveralls-link]
+[![Dependency Status][dependency-badge]][dependency-link]
 
 **Further Review** enforces glob based code reviews on PRs.
 
@@ -107,3 +109,10 @@ To just subscribe to files for notification but not be required for review, you 
 
 * [LGTM](https://lgtm.co)
 * [Facebook's Mention Bot](https://github.com/facebook/mention-bot)
+
+[travis-badge]: https://travis-ci.org/underarmour/further-review.svg?branch=master
+[travis-link]: https://travis-ci.org/underarmour/further-review
+[coveralls-badge]: https://coveralls.io/repos/github/underarmour/further-review/badge.svg?branch=master
+[coveralls-link]: https://coveralls.io/github/underarmour/further-review?branch=master
+[dependency-badge]: https://dependencyci.com/github/underarmour/further-review/badge
+[dependency-link]: https://dependencyci.com/github/underarmour/further-review
