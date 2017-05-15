@@ -1,20 +1,15 @@
 {
+  presets: [
+    ['env', {
+      targets: { node: 6 },
+      include: ['transform-es2015-classes'],
+      useBuiltIns: true,
+      spec: true
+    }]
+  ],
   "plugins": [
-    "syntax-trailing-function-commas",
-    "transform-async-to-generator",
     ["transform-builtin-extend", { "globals": ["Error"] }],
-    "transform-class-properties",
-    "transform-es2015-classes",
-    "transform-es2015-destructuring",
-    "transform-es2015-function-name",
-    "transform-es2015-modules-commonjs",
-    "transform-es2015-parameters",
-    "transform-es2015-shorthand-properties",
-    "transform-es2015-spread",
-    "transform-es2015-sticky-regex",
-    "transform-es2015-unicode-regex",
-    "transform-exponentiation-operator",
-    "transform-object-rest-spread"
+    "transform-object-rest-spread",
   ],
   "env": {
     "development": {
