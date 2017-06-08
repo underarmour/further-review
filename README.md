@@ -1,6 +1,8 @@
 # (Upon) Further Review
 
-[![Build Status](https://travis-ci.org/paultyng/further-review.svg?branch=master)](https://travis-ci.org/paultyng/further-review) [![Coverage Status](https://coveralls.io/repos/github/paultyng/further-review/badge.svg?branch=master)](https://coveralls.io/github/paultyng/further-review?branch=master) [![Dependency Status](https://dependencyci.com/github/paultyng/further-review/badge)](https://dependencyci.com/github/paultyng/further-review)
+[![Build Status][travis-badge]][travis-link]
+[![Coverage Status][coveralls-badge]][coveralls-link]
+[![Dependency Status][dependency-badge]][dependency-link]
 
 **Further Review** enforces glob based code reviews on PRs.
 
@@ -36,11 +38,29 @@ reviews:
 
 Given the file above, when a new PR is submitted, at least one of **user1** or **user2** will need to sign off due to the `General Maintainers` rule, and if the PR touches the **package.json** file, **paultyng** would also need to sign off.
 
+### Preliminary Setup
+
+#### Github Access Token
+
+Create a [personal access token](https://github.com/settings/tokens):
+![Setting a personal access token](docs/img/access-token.png)
+
 ### Installation
 
 #### Docker
 
-Coming soon...
+```bash
+> git clone git@github.com:underarmour/further-review.git
+> cd further-review
+> docker build .
+> docker run --env GITHUB__TOKEN=<token> <image_id>
+```
+
+To run in Github Enterprise, use:
+
+```bash
+> docker run --env GITHUB__TOKEN=<token> --env GITHUB__BASE_URL=<api_path> <image_id>
+```
 
 #### Lambda
 
@@ -50,12 +70,28 @@ This application uses [Apex](http://apex.run) to run on AWS Lambda.  To deploy o
 
   ```json
   {
-    "GITHUB_TOKEN": "YOUR TOKEN HERE",
+    "GITHUB_TOKEN": "YOUR ACCESS TOKEN HERE",
     "GITHUB_BASE_URL": "https://api.github.com/"
   }
   ```
 
 1. Run `apex deploy -e env.json`
+
+#### Setting up the Webhooks
+
+> ##### Local Development Note
+You'll need a tunnel or public ip for github to reach your hook.
+If you don't have a public host, you can use a service like [ngrok](https://ngrok.com/).
+
+A webhook should be configured in GitHub with the payload URL of
+```
+http://<host or ip from docker or Lambda>/github-webhook
+```
+with the following events:
+
+* Issue comment
+* Pull request
+* Pull request review comment
 
 ### Additional Setup
 
@@ -65,14 +101,6 @@ Further Review works best when the `master` branch is protected until it reviews
 
 ![Protecting the master branch](docs/img/protect-branch.png)
 
-#### Setting up the Webhooks
-
-A webhook should be configured in GitHub with the following events:
-
-* Issue comment
-* Pull request
-* Pull request review comment
-
 ## Using for Glob based Watch / Subscriptions
 
 To just subscribe to files for notification but not be required for review, you can add a targeted review with zero required sign-offs.
@@ -81,3 +109,10 @@ To just subscribe to files for notification but not be required for review, you 
 
 * [LGTM](https://lgtm.co)
 * [Facebook's Mention Bot](https://github.com/facebook/mention-bot)
+
+[travis-badge]: https://travis-ci.org/underarmour/further-review.svg?branch=master
+[travis-link]: https://travis-ci.org/underarmour/further-review
+[coveralls-badge]: https://coveralls.io/repos/github/underarmour/further-review/badge.svg?branch=master
+[coveralls-link]: https://coveralls.io/github/underarmour/further-review?branch=master
+[dependency-badge]: https://dependencyci.com/github/underarmour/further-review/badge
+[dependency-link]: https://dependencyci.com/github/underarmour/further-review
