@@ -105,6 +105,37 @@ Further Review works best when the `master` branch is protected until it reviews
 
 To just subscribe to files for notification but not be required for review, you can add a targeted review with zero required sign-offs.
 
+## Whitelisted Users / Tools
+
+When using a tool that creates automatically managed PRs, such as Greenkeeper or Renovate, you may wish to bypass FR.
+
+Use the `users_whitelist` config setting to provide a list of users.  If a PR is opened for a user in that list, the status check
+will be marked as successful and the providers will not run against it.
+
+```yaml
+users_whitelist:
+  - greenkeeper
+  - renovate
+reviews:
+  - name: Package.json Maintainers
+    # List of GitHub usernames
+    logins:
+      # All three of the following formats are supported:
+      - paultyng
+      - paultyng <paul@example.com>
+      - Paul Tyng <paul@example.com> (@paultyng)
+    # Optional glob to match on
+    glob: package.json
+    # Number of required sign offs
+    required: 1
+  # Multiple reviews can be listed.
+  - name: General Maintainers
+    logins:
+      - user1
+      - user2
+
+```
+
 ## Inspirations
 
 * [LGTM](https://lgtm.co)
